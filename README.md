@@ -5,10 +5,9 @@
 $ go get github.com/dhimweray222/market-place
 ```
 ## ERD
-```
-file:///home/dhimas/synapsis/challenge_test/public/marketPlace.png
 
-```
+![alt text](https://github.com/dhimweray222/market-place/blob/main/public/marketPlace.png?raw=true)  
+
 
 ## Structure
 ```
