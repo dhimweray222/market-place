@@ -48,7 +48,7 @@ Create a database called **market_place**
 
 You should modify `.env`
 
-```
+```![Alt text](image link)
 DB_USER=<username db>
 DB_NAME=market_place
 DB_PASSWORD=<db password>
