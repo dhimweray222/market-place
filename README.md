@@ -6,7 +6,8 @@ $ go get github.com/dhimweray222/market-place
 ```
 ## ERD
 ```
-![alt text](https://github.com/dhimweray222/market-place/blob/main/public/marketPlace.png?raw=true)  
+file:///home/dhimas/synapsis/challenge_test/public/marketPlace.png
+
 ```
 
 ## Structure
