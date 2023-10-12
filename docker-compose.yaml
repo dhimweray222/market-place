@@ -1,0 +1,57 @@
+version: '3.9'
+
+networks:
+  test-network:
+    # external: true
+
+services:
+  market-place:
+    # image: test-synapsis:latest
+    image: testing:latest
+    ports:
+      - '8080:8080'
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - RedisAddr=${RedisAddr}
+      - Xendit_API_KEY=${Xendit_API_KEY}
+    networks:
+      - test-network
+
+  postgres:
+    container_name: postgres-db
+    image: postgres
+    # expose:
+    #   - "5432"
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - POSTGRES_PORT=${DB_PORT}
+      - DB_HOST={${DB_HOST}
+    networks:
+      - test-network
+
+  redis:
+    container_name: redis-be
+    image: redis
+    # expose:
+    #   - "6379"
+    ports:
+     - "6379:6379"
+    env_file:
+      - .env
+    environment:
+    - RedisAddr=${RedisAddr}
+    networks:
+      - test-network
+
+
+
